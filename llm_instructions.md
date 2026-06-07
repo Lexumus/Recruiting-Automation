@@ -146,9 +146,37 @@ Use this scale consistently:
 - Do not inflate scores for impressive but irrelevant experience
 - Do not overvalue brand-name companies or schools
 
+<!-- ================================================================
+  CUSTOM ROLE DESCRIPTIONS
+  Add or replace the role descriptions below to match your open roles.
+  Each role block has three sections to fill in:
+    1. Role Description  — a 2-3 sentence summary of the position
+    2. Responsibilities  — bullet list of what the intern/co-op will do
+    3. Ideal Candidate   — bullet list of skills and traits you're looking for
+  The agent uses these descriptions to score every resume.
+  You can add as many role blocks as you need.
+================================================================ -->
+
 ### Default Scoring Criteria for AI SWE Co-op Roles
 
 When scoring resumes for entry-level AI SWE Co-op/internship roles, apply these criteria automatically:
+
+**Role Description:**
+We are looking for an AI Software Engineer Co-op/Intern to help build and improve AI-powered systems. You will work on designing and implementing backend services, integrating LLMs and AI APIs, and contributing to production pipelines. This is a hands-on engineering role — you will write real code that ships.
+
+**Responsibilities:**
+- Build and maintain backend APIs and services that power AI features
+- Integrate and experiment with LLMs (OpenAI, Gemini, open-source models)
+- Write clean, testable Python code with proper documentation
+- Contribute to data pipelines and preprocessing workflows
+- Collaborate with a small team in a fast-moving startup environment
+
+**Ideal Candidate:**
+- Strong Python skills — this is non-negotiable
+- Exposure to AI/ML concepts through coursework, projects, or internships
+- Experience building APIs (FastAPI, Flask, or similar)
+- Comfort with Git, basic cloud tools, and working in a terminal
+- Curious, self-directed, and able to work with ambiguity
 
 **Role Context:**
 - This is an entry-level internship/co-op role primarily targeting strong undergraduate students
@@ -173,6 +201,23 @@ When scoring resumes for entry-level AI SWE Co-op/internship roles, apply these 
 
 When scoring resumes for entry-level ML Engineer co-op/internship roles, apply these criteria automatically:
 
+**Role Description:**
+We are looking for a Machine Learning Engineer Co-op/Intern to help design, train, and evaluate ML models. You will work closely with data and engineering teams to bring models from experimentation to deployment. This role bridges research and production.
+
+**Responsibilities:**
+- Train, evaluate, and iterate on ML models using real-world datasets
+- Preprocess and analyze data to support model development
+- Implement experiments and track results (e.g., with MLflow or similar)
+- Help productionize models by wrapping them in APIs or pipelines
+- Read and apply relevant ML research when needed
+
+**Ideal Candidate:**
+- Solid Python skills with hands-on experience in ML frameworks (PyTorch, TensorFlow, or scikit-learn)
+- Understanding of core ML concepts: training/validation/test splits, loss functions, overfitting, evaluation metrics
+- Experience working with real datasets — even in academic or project settings
+- Familiarity with Jupyter notebooks, pandas, and NumPy
+- Strong math/stats foundation (linear algebra, probability, calculus)
+
 **Role Context:**
 - This is an entry-level internship/co-op role primarily targeting strong undergraduate students
 - Do not score candidates like senior engineers - give credit for coursework, projects, research, internships, and student engineering experience
@@ -196,6 +241,23 @@ When scoring resumes for entry-level ML Engineer co-op/internship roles, apply t
 ### Default Scoring Criteria for Data/ML Ops Engineer Co-op Roles
 
 When scoring resumes for entry-level Data/ML Ops Engineer co-op/internship roles, apply these criteria automatically:
+
+**Role Description:**
+We are looking for a Data/ML Ops Engineer Co-op/Intern to help build and maintain the infrastructure that keeps our data and ML systems running reliably. You will work on data pipelines, deployment automation, and monitoring — the plumbing that makes AI products possible.
+
+**Responsibilities:**
+- Build and maintain data pipelines that ingest, transform, and serve data
+- Assist with deploying and monitoring ML models in production
+- Write automation scripts and contribute to CI/CD workflows
+- Work with cloud infrastructure (AWS, GCP, or Azure) and containerized services
+- Instrument systems with logging and alerting to catch issues early
+
+**Ideal Candidate:**
+- Comfortable in Python and at least one scripting language (Bash or SQL)
+- Exposure to cloud platforms and basic infrastructure concepts
+- Familiarity with Docker; Kubernetes is a plus
+- Interest in reliability, automation, and operational excellence
+- Detail-oriented and systematic — you care about things not breaking
 
 **Role Context:**
 - This is an entry-level internship/co-op role primarily targeting strong undergraduate students
