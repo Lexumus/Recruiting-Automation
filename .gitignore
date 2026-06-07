@@ -1,3 +1,14 @@
+# ─────────────────────────────────────────────────────────────
+# Candidate data — never commit resumes or personal info
+# ─────────────────────────────────────────────────────────────
+resumes/
+resumes_in_md/
+resume-rag-db/
+resume_data.txt
+
+# macOS
+.DS_Store
+
 # Created by https://www.toptal.com/developers/gitignore/api/pycharm+all,python,flask
 # Edit at https://www.toptal.com/developers/gitignore?templates=pycharm+all,python,flask
 

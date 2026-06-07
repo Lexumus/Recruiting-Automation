@@ -4,7 +4,7 @@ from pydantic_ai.models.openai import OpenAIModel
 from pydantic_ai.models.gemini import GeminiModel
 from pydantic_ai.providers.google_gla import GoogleGLAProvider
 from pydantic_ai.providers.openai import OpenAIProvider
-from tools.retrieve_similar_resumes_tool import retrieve_relevant_resumes
+from tools.retrieve_all_resumes_tool import retrieve_all_resumes
 from models.resume_retriever_agent_dependency import ResumeRetrieverAgentDependency
 
 # read environment vars
@@ -32,4 +32,4 @@ resume_sorter_agent = Agent(model=model,
                             instructions=load_instructions(),
                             deps_type=ResumeRetrieverAgentDependency,
                             retries=3,
-                            tools=[retrieve_relevant_resumes],)
+                            tools=[retrieve_all_resumes],)

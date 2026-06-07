@@ -27,7 +27,7 @@ if MODEL == 'gemini':
     embeddings = registry.get('gemini-text').create()
 elif MODEL == 'openai':
     registry.set_var("api_key", OPENAI_API_KEY)
-    embeddings = registry.get('openai').create(name='text-embedding-ada-002')
+    embeddings = registry.get('openai').create(name='text-embedding-3-small')
 else:
     ValueError(f'invalid model: {MODEL}')
 
@@ -155,4 +155,20 @@ def retrieve_similar_docs(query: str, table_name: str = TABLE_NAME, limit: int =
     print(f'fetched {len(results)} resumes.')
     for r in results:
         print(f'{r["label"]} ({r["_relevance_score"]})')
+    return results
+
+
+def retrieve_all_docs(table_name: str = TABLE_NAME, limit: int = 100):
+    """
+    Retrieve ALL docs from the LanceDB table without any filtering or search.
+    Use this when you need to evaluate all candidates.
+    """
+    table = get_table(table_name=table_name)
+    # Use to_pandas to get all rows, then convert to list of dicts
+    df = table.to_pandas()
+    results = df.head(limit).to_dict('records')
+    
+    print(f'fetched {len(results)} resumes (all).')
+    for r in results:
+        print(f'{r["label"]}')
     return results
