@@ -40,7 +40,9 @@ Conversational AI agent (CLI)
    - `positions[].folderId` — Google Drive folder ID for each role
    - Adjust `positions[].title` and `tabName` to match your open roles
 4. Run `setup()` once manually — this creates the sheet tabs and Gmail labels
-5. Add a **time-driven trigger** on `processResumeEmails` (every 5–10 minutes) via the Apps Script trigger editor
+5. Run `processResumeEmails` whenever you want to process new emails:
+   - **Manually:** select `processResumeEmails` from the function dropdown in the Apps Script editor and click Run
+   - **Automatically:** add a time-driven trigger in the Apps Script trigger editor (Triggers → Add Trigger → `processResumeEmails` → time-driven, every 5–10 minutes)
 
 ### Positions (default config)
 
@@ -114,6 +116,53 @@ Example session:
 >> Among those, 3 have PyTorch experience...
 
 >: exit
+```
+
+---
+
+### Scoring Candidates & Populating the Sheet
+
+The AI agent scores every candidate against the role's job description. Use the scores to manually update the **Status** column in your Google Sheet.
+
+**Step 1 — Request scores for a role**
+
+```
+>: Score all candidates for the AI SWE role
+>: Score all candidates for the ML Engineer role
+>: Score all candidates for the Data/ML Ops role
+```
+
+The agent returns each candidate with a fit score (1–10), short notes, and evidence from their resume.
+
+**Step 2 — Update the sheet**
+
+Open your Google Sheet and fill in the **Status** column based on the score:
+
+| Score | Suggested Status |
+|---|---|
+| 9–10 | Strong Yes |
+| 7–8 | Yes |
+| 5–6 | Maybe |
+| 3–4 | No |
+| 1–2 | Strong No |
+
+**Example output:**
+```
+>: Score all candidates for the Data/ML Ops role
+
+>> Ben Almstead — Fit Score: 7/10
+   Notes: Python strong, some Docker, limited cloud
+   Evidence: Python projects on GitHub; Docker in skills; no AWS/GCP mentioned
+
+>> Haley Yan — Fit Score: 5/10
+   Notes: SQL experience, limited pipeline work
+   Evidence: SQL coursework; one ETL project; no CI/CD shown
+```
+
+You can also ask follow-up questions before or after scoring:
+```
+>: Which candidates have Docker experience?
+>: Compare the top 3 candidates for ML Engineer
 ```
 
 ### Configuration
