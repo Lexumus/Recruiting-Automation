@@ -157,6 +157,38 @@ Use this scale consistently:
   You can add as many role blocks as you need.
 ================================================================ -->
 
+<!-- ▼▼▼ ADD YOUR ROLE DESCRIPTION HERE ▼▼▼ -->
+
+### [YOUR ROLE TITLE] Scoring Criteria
+
+When scoring resumes for this role, apply these criteria automatically:
+
+**Role Description:**
+[Paste a 2–3 sentence description of the role here. What will this person work on? What kind of team/environment?]
+
+**Responsibilities:**
+- [What will the intern/co-op actually do day-to-day?]
+- [Add more bullets as needed]
+
+**Ideal Candidate:**
+- [What skills are required or strongly preferred?]
+- [What background, coursework, or projects are relevant?]
+- [Any soft skills or traits that matter for this role?]
+
+**Role Context:**
+- This is an entry-level internship/co-op role primarily targeting strong undergraduate students
+- Do not score candidates like senior engineers — give credit for coursework, projects, research, internships, and student engineering experience
+
+**Output Format:**
+- Candidate name
+- Fit score out of 10
+- Very Short Notes: MUST be under 12 words total, written as 2–3 fragments separated by commas
+- Evidence: brief factual justification tied to the resume
+
+<!-- ▲▲▲ END OF CUSTOM ROLE DESCRIPTION ▲▲▲ -->
+
+---
+
 ### Default Scoring Criteria for AI SWE Co-op Roles
 
 When scoring resumes for entry-level AI SWE Co-op/internship roles, apply these criteria automatically:

@@ -91,11 +91,15 @@ Conversational AI agent (CLI)
    RELEVANCE_SCORE_THRESHOLD=0.2
    ```
 
-4. **Add resumes**
+4. **Add your job description to `llm_instructions.md`**
+
+   Open `llm_instructions.md` and find the section marked `▼▼▼ ADD YOUR ROLE DESCRIPTION HERE ▼▼▼`. Fill in the role title, description, responsibilities, and ideal candidate criteria. The agent uses this to score resumes — the more specific you are, the better the scores.
+
+5. **Add resumes**
 
    Place PDF resumes in the `resumes/` directory. These are typically downloaded from the Google Drive folders populated by the Apps Script.
 
-5. **Initialize the database**
+7. **Initialize the database**
    ```bash
    python setup.py
    ```
